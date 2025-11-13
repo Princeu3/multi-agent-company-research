@@ -42,6 +42,7 @@ from ui.intent_handlers.management import (
     handle_clear,
     handle_list_companies
 )
+from ui.intent_handlers.download import handle_download
 
 __all__ = [
     'handle_analyze',
@@ -53,5 +54,6 @@ __all__ = [
     'handle_show_strengths_weaknesses',
     'handle_delete',
     'handle_clear',
-    'handle_list_companies'
+    'handle_list_companies',
+    'handle_download'
 ]

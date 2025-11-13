@@ -45,6 +45,7 @@ def display_chat_messages():
 
     This function renders all messages in the chat history,
     with proper formatting for user and assistant messages.
+    Also handles special cases like download buttons.
 
     Example:
         display_chat_messages()
@@ -53,6 +54,19 @@ def display_chat_messages():
     for message in st.session_state.chat_messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
+
+            # Check if this message has a download button flag
+            if message.get("download", False):
+                # Display download button if pending download exists
+                if hasattr(st.session_state, 'pending_download') and st.session_state.pending_download:
+                    download_data = st.session_state.pending_download
+                    st.download_button(
+                        label="📥 Download PDF Report",
+                        data=download_data['buffer'].getvalue(),
+                        file_name=download_data['filename'],
+                        mime="application/pdf",
+                        key=f"download_{download_data['filename']}"
+                    )
 
 
 def classify_user_intent(user_message: str) -> dict:

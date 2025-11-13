@@ -45,7 +45,7 @@ def create_intent_classification_prompt(user_message: str, analyzed_companies: L
 Analyze the user's message and return a JSON object with the following structure:
 
 {{
-    "intent": "one of: analyze, compare, rag_question, show_score, show_details, show_environmental, show_social, show_governance, show_strengths_weaknesses, list_companies, delete, clear",
+    "intent": "one of: analyze, compare, rag_question, show_score, show_details, show_environmental, show_social, show_governance, show_strengths_weaknesses, list_companies, delete, clear, download",
     "companies": ["list of company names mentioned"],
     "question": "the actual question if it's a rag_question, otherwise null",
     "needs_analysis": ["list of companies that need to be analyzed first"]
@@ -65,6 +65,7 @@ INTENT DEFINITIONS:
 - "list_companies": User wants to see all analyzed companies
 - "delete": User wants to delete specific company/companies from the database
 - "clear": User wants to clear/reset everything (delete all)
+- "download": User wants to download a PDF report for one or more companies
 
 NEEDS_ANALYSIS FIELD:
 ---------------------
@@ -87,6 +88,12 @@ Output: {{"intent": "show_environmental", "companies": ["Apple"], "question": nu
 
 User: "Delete Tesla"
 Output: {{"intent": "delete", "companies": ["Tesla"], "question": null, "needs_analysis": []}}
+
+User: "Download Tesla report"
+Output: {{"intent": "download", "companies": ["Tesla"], "question": null, "needs_analysis": ["Tesla"] if not analyzed}}
+
+User: "Download comparison report for Tesla and Apple"
+Output: {{"intent": "download", "companies": ["Tesla", "Apple"], "question": null, "needs_analysis": [] if both analyzed}}
 
 USER MESSAGE TO CLASSIFY:
 {user_message}

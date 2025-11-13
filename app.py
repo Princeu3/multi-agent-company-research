@@ -49,7 +49,8 @@ from ui.intent_handlers import (
     handle_show_strengths_weaknesses,
     handle_delete,
     handle_clear,
-    handle_list_companies
+    handle_list_companies,
+    handle_download
 )
 
 
@@ -135,6 +136,10 @@ def main():
             # RAG question intent
             elif intent == "rag_question":
                 handle_rag_question(companies, question)
+
+            # Download intent
+            elif intent == "download":
+                handle_download(companies)
 
             # Analyze intent (already handled in STEP 1)
             # No additional action needed
