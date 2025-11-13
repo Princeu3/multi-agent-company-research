@@ -3,9 +3,8 @@ openai==1.54.0
 python-dotenv==1.0.0
 requests==2.31.0
 
-# Web scraping and search
+# Web scraping
 firecrawl-py==0.0.16
-perplexity-sdk==0.1.0
 
 # Database
 sqlalchemy==2.0.23

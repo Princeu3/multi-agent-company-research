@@ -91,6 +91,7 @@ def get_initial_chat_message() -> str:
 ✅ **Ask questions**: "How does Tesla handle carbon emissions?" (I'll use scraped data!)
 ✅ **Find strengths**: "What is Apple good at?"
 ✅ **Get details**: "Tell me more about Microsoft"
+✅ **Download reports**: "Download Tesla report" or "Download comparison for Tesla and Apple"
 ✅ **Manage**: "Delete Tesla" or use 🗑️ buttons in sidebar
 
 I use real web data and AI to answer your questions! 🚀"""
