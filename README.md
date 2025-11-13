@@ -1,6 +1,6 @@
-# 🌱 Company Sustainability Scoring System
+# 🤖 Multi Agent Company Research System
 
-A comprehensive AI-powered system for analyzing and scoring companies' Environmental, Social, and Governance (ESG) sustainability practices.
+A comprehensive AI-powered multi-agent system for researching, analyzing, and scoring companies' Environmental, Social, and Governance (ESG) sustainability practices. This system employs multiple specialized agents working together to provide deep insights into corporate sustainability performance.
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
@@ -31,7 +31,7 @@ A comprehensive AI-powered system for analyzing and scoring companies' Environme
 
 ## 🎯 Overview
 
-The **Company Sustainability Scoring System** is an intelligent platform that automatically researches, analyzes, and scores companies based on their ESG (Environmental, Social, and Governance) practices. Using cutting-edge AI and web scraping technologies, it provides comprehensive insights into corporate sustainability performance.
+The **Multi Agent Company Research System** is an intelligent multi-agent platform that automatically researches, analyzes, and scores companies based on their ESG (Environmental, Social, and Governance) practices. Using cutting-edge AI agents and web scraping technologies, it employs specialized agents for research, extraction, scoring, and Q&A to provide comprehensive insights into corporate sustainability performance.
 
 ### Key Capabilities
 
